@@ -5,11 +5,26 @@ library(pacman)
 p_load(shiny, shinythemes)
 
 #### VARIABLES AUXILIARES ####
+
+coloreado <- c(
+    "Sexo" = "Sex",
+    "Estado civil" = "Marital",
+    "Raza" = "Race",
+    "Síndrome Metabólico" = "MetabolicSyndrome"
+)
+
+
 columnas <- c(
-  "Longitud del sépalo"="Sepal.Length",
-  "Ancho del sépalo"="Sepal.Width",
-  "Longitud del pétalo"="Petal.Length",
-  "Ancho del pétalo"="Petal.Width"
+  "Edad" = "Age",
+  "Ingreso" = "Income",
+  "Circunferencia de cintura" = "WaistCirc",
+  "IMC" = "BMI",
+  "Albuminuria" = "Albuminuria",
+  "Proporción albúmina-creatinina" = "UrAlbCr",
+  "Nivel de Ácido úrico" = "UricAcid",
+  "Nivel de Glucosa" = "BloodGlucose",
+  'Nivel de colesterol "bueno"' = "HDL",
+  "Triglicéridos"="Triglycerides"
 )
 
 graficas_univariables <- c(
@@ -27,6 +42,11 @@ graficas_bivariables <- c(
 
 #### CONTROLES ####
 
+color_control <- selectInput("color", "Color",
+                             choices = coloreado,
+                             selected = "MetabolicSyndrome"
+                             )
+
 ### Univariable
 col_control <- selectInput("col", "Columna",
                             choices = columnas,
@@ -42,6 +62,7 @@ graf_uni_control <- selectInput("graf_uni", "Tipo de Gráfica",
 )
 
 tab_univariable <- tabPanel("Univariable", value="univariable",
+                            color_control,
                             col_control,
                             graf_uni_control
 )
@@ -67,6 +88,7 @@ graf_bi_control <- selectInput("graf_bi", "Tipo de Gráfica",
 
 
 tab_bivariable <- tabPanel("Bivariable", value="bivariable",
+                           color_control,
                            colx_control, coly_control,
                            graf_bi_control
 )
@@ -82,7 +104,7 @@ ui <- fluidPage(
    theme = shinytheme("cerulean"),
   
     #Titulo
-    titlePanel("Exploración Gráfica Básica de Iris"),
+    titlePanel("Exploración Gráfica Básica de Personas con y sin Síndrome Metabólico"),
 
     #Pestanias
     sidebarLayout(
