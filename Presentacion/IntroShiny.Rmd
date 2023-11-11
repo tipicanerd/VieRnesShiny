@@ -122,10 +122,11 @@ background-size: 12%
 * Lógica de Shiny
     + UI
     + SERVER
-* Ejercicio
 * Consejos
     + Desempeño
     + Seguridad
+* Ejercicio
+
 
 ---
 class: middle, center, title-slide
@@ -289,7 +290,7 @@ background-size: 12%
 .pull-left[
 ## Desempeño
 * Guardar en variables bloques de elementos.
-* Crear diciconarios de la forma _Etiqueta_:valor para facilitar las opciones.
+* Crear diccionarios de la forma _Etiqueta_:valor para facilitar las opciones.
 * Nombrar las variables de forma descriptiva.
 * Utilizar pestañas cuando el _input_ es el mismo, pero los _outputs_ son diferentes.
 * Separar en archivos la **UI**, el **Server** y las **funciones** para proyectos grandes.
@@ -394,8 +395,6 @@ function(input, output, session) {
 
 ---
 
----
-
 class: left, middle
 background-image: url(imgs/rladies_logo-alt.png) 
 background-position: 2% 2%
@@ -405,6 +404,21 @@ background-size: 12%
 
 <img src="imgs/ejemplo.png" width="90%"
 alt="layout"/>
+
+---
+
+class: left, middle
+background-image: url(imgs/rladies_logo-alt.png) 
+background-position: 2% 2%
+background-size: 12%
+
+# Ejercicio
+Modificar el código base para crear una aplicación que se adapate a un _dataset_ de tu interés o a alguno de los propuestos a continuación:
+* [Títulos de Netflix](https://www.kaggle.com/datasets/shivamb/netflix-shows)
+* [Níveles de estrés](https://www.kaggle.com/datasets/rxnach/student-stress-factors-a-comprehensive-analysis/data)
+* [Síndrome Metabólico](https://www.kaggle.com/datasets/antimoni/metabolic-syndrome)
+
+
 
 ---
 

@@ -16,7 +16,7 @@ graficas_univariables <- c(
   "Boxplot" = "boxplot",
   "Densidad" = "densidad",
   "Histograma" = "histograma",
-  "Violin" = "violin"
+  "Violín" = "violin"
 )
 
 
